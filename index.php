@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_COOKIE['nueva'])){
-    header("Location:enter.php");
+    header("Location:user.php");
 }else{
     
     

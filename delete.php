@@ -41,7 +41,7 @@ while($row = mysql_fetch_array($resultado)){
 
 mysql_close();
 
-include('links.php');
+
 
 
 } 

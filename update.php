@@ -80,9 +80,6 @@ if(!($pagina>=$paginas)){
 echo "</center>";
 mysql_close();
 
-include('links.php');
-
-
 }
 
 ?>

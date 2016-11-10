@@ -1,11 +1,15 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+session_start();
 
 
-if(!isset($_SESSION['name'])){
+if(isset($_SESSION['name']) || isset($_COOKIE['nueva'])){
+
+if(!isset($_SESSION['name']) || isset($_COOKIE['nueva'])){
     
-    echo "No existe sessíon !!";   
+   $_SESSION['name']=$_COOKIE['nueva'];    
     
-}else{
+}
     
     
     $dir = "fotos/".$_SESSION['name'];
@@ -20,6 +24,9 @@ if(!isset($_SESSION['name'])){
 
 echo " <b>" .$_SESSION['name']."</b> Ha iniciado sessión<br />"."<a href='logout.php'>salir de sesión</a><hr />";
 include('links.php');
+}else{
+    
+    echo "Acceso no permitido!!!!";
 }
 
 ?>

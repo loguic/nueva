@@ -34,7 +34,7 @@ if($_POST){
                     
                 }
                 
-                header('location:enter.php');
+                header('location:user.php');
                 
             }else{
                 echo "Esta password esta incorrecta!!";
